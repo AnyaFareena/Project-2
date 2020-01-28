@@ -1,0 +1,172 @@
+@font-face {
+    font-family: 'Retro Gaming';
+    src: url('/assets/font/RetroGaming.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 20000% 0; }
+}
+
+html, body {
+    height: 100%;
+}
+body {
+    font-family: 'Retro Gaming';
+    background: black;
+    color: white;
+}
+
+.full-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+div {
+    box-sizing: border-box;
+    position: relative;
+}
+#game {
+    width: 100%;
+    height: 100%;
+}
+#title,
+#menuCharacterSelect,
+#menuLocationSelect,
+#menuDifficulty,
+#quiz,
+#ending {
+    padding: 30px;
+}
+#title {
+    height: 100%;
+    position: relative;
+    background: #00448d;
+    color: white;
+}
+#title #gameButtons .btn.btn-primary {
+    display: block;
+    margin: 3em auto;
+    font-size: 20px;
+    padding: 1em 1.5em;
+    text-align: center;
+    width: 100%;
+}
+
+#menuCharacterSelect{
+    background-color: #222;
+    color: white;
+    padding: 20px;
+}
+#menuCharacterSelect h1 {
+    margin: 20px 0;
+}
+#menuCharacterSelect .character,
+#menuCharacterSelect #menuCharacterAdd {
+    border: 3px solid #222;
+    color: black;
+    background-color: white;
+    margin: 0 0 30px;
+    padding: 10px;
+    height: 280px;
+    font-size: 20px;
+    text-align: center;
+}
+#menuCharacterSelect .character:hover {
+    border-color: #0066ff;
+}
+#menuCharacterSelect .character .characterName {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+#menuCharacterSelect #menuCharacterAdd .btn {
+    margin: 10px 0 0;
+}
+#menuCharacterSelect #menuCharacterAdd > div {
+    width: 80%;
+}
+#saveCodeLink {
+    padding: 30px 0;
+    background: black;
+    color: white;
+}
+
+#menuLocationSelect {
+    height: 100%;
+    background: black;
+    color: white;
+}
+#menuLocationSelect h2 {
+    margin: 20px 0;
+}
+#menuLocationSelect .location {
+    position: relative;
+    margin: 0 0 30px;
+    height: 300px;
+    text-align: center;
+    box-sizing: border-box;
+    background-size: cover;
+    background-color: white;
+    color: black;
+    border: 3px solid #000000;
+	animation: slide 2000s linear infinite;
+}
+#menuLocationSelect .location:hover {
+    border-color: #0066ff;
+}
+
+#menuDifficulty {
+    height: 100%;
+    background: black;
+    color: white;
+}
+#menuDifficulty button {
+    display: block;
+    margin: 3em auto;
+    font-size: 20px;
+    padding: 1em 1.5em;
+    text-align: center;
+    width: 100%;
+}
+
+#quiz {
+    background-color: white;
+    color: black;
+    background-size: cover;
+    height: 100%;
+	animation: slide 2000s linear infinite;
+}
+#quiz .sprite {
+    position: absolute;
+    bottom: 30px;
+    left: 15%;
+    width: 80px;
+}
+#quiz h2 {
+    margin: 20px 0;
+}
+#quiz .choice {
+    border: 2px solid transparent;
+    background: #ffffff99;
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+}
+#quiz .choice:hover {
+    border-color: black;
+}
+#quiz .choice:focus {
+    border-color: red;
+}
+#quiz #questionResult {
+    margin: 20px 0;
+}
+
+#ending {
+    background: black;
+    color: white;
+    height: 100%;
+}
